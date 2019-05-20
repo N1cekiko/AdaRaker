@@ -2,10 +2,8 @@
 
 function [f_hat, theta_new,act_w,er_hat,erm]=mkl_adap_online(y,X,params)
 S=params.S;
-N=params.N; T=params.T; ker_list=params.ker_list;   beta=params.beta; delta=params.delta;
+N=params.N; T=params.T; ker_list=params.ker_list;   beta=params.beta; 
 lambda=params.lambda; sigma=params.sigma; L=params.L;
-%lambda=params.lambda;
-%D_new=X(:,1);
 n_act=1; N_act=floor(log(T)/log(S))+1; n_ker=length(sigma); 
 theta=params.theta_ini;
 w=cell(size(ker_list));
